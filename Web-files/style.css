@@ -1,0 +1,49 @@
+/* style.css */
+body {
+    background-color: green;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+#social-media {
+    margin: 20px 0;
+}
+
+#social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#social-media ul li {
+    display: inline;
+    margin: 10px;
+}
+
+#social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
