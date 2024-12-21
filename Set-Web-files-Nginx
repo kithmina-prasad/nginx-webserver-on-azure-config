@@ -1,0 +1,28 @@
+azurex0@nginx:~$ sudo mv nginx,azurex0.com/ /var/www/
+mv: cannot stat 'nginx,azurex0.com/': No such file or directory
+azurex0@nginx:~$ sudo mv nginx.azurex0.com/ /var/www/
+azurex0@nginx:~$ cd /var/www
+azurex0@nginx:/var/www$ ls
+html  nginx.azurex0.com
+azurex0@nginx:/var/www$ sudo nano /etc/nginx/sites-available/default
+azurex0@nginx:/var/www$ sudo systemctl reload nginx
+azurex0@nginx:/var/www$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2024-12-21 03:46:30 UTC; 1h 0min ago
+       Docs: man:nginx(8)
+    Process: 4615 ExecReload=/usr/sbin/nginx -g daemon on; master_process on; -s reload (code=exited, status=0/SUCCESS)
+   Main PID: 3240 (nginx)
+      Tasks: 3 (limit: 9459)
+     Memory: 2.5M (peak: 4.4M)
+        CPU: 30ms
+     CGroup: /system.slice/nginx.service
+             ├─3240 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─4616 "nginx: worker process"
+             └─4617 "nginx: worker process"
+
+Dec 21 03:46:30 nginx systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Dec 21 03:46:30 nginx systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Dec 21 04:46:19 nginx systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Dec 21 04:46:19 nginx systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Dec 21 04:46:19 nginx nginx[4615]: 2024/12/21 04:46:19 [notice] 4615#4615: signal process started
